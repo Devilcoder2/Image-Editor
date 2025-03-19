@@ -1,11 +1,12 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect, useRef, useState } from "react";
-import ReactCrop, { Crop, PixelCrop } from "react-image-crop";
+import ReactCrop, { PixelCrop } from "react-image-crop";
 import "react-image-crop/dist/ReactCrop.css";
 import CustomButton from "./CustomButton";
 
 const ImageEditor: React.FC = () => {
   const [image, setImage] = useState<string | null>(null);
-  const [crop, setCrop] = useState<Crop>({ aspect: 1 });
+  const [crop, setCrop] = useState<any>({ aspect: 1 });
   const [completedCrop, setCompletedCrop] = useState<PixelCrop | null>(null);
   const [croppedImage, setCroppedImage] = useState<string | null>(null);
   const [rotation, setRotation] = useState(0);
